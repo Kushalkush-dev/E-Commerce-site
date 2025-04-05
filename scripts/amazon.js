@@ -46,7 +46,7 @@ producthtml+= `<div class="product-container">
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary js-add-cart-btn">
+          <button class="add-to-cart-button button-primary js-add-cart-btn" data-product-name="${product.id}">
             Add to Cart
           </button>
         </div>`
@@ -54,6 +54,18 @@ producthtml+= `<div class="product-container">
 
 })
 
-productgrid.innerHTML=producthtml
+productgrid.innerHTML=producthtml;
+
+const jsCartbtn=document.querySelectorAll(".js-add-cart-btn");
+
+jsCartbtn.forEach((button)=>{
+  button.addEventListener("click",()=>{
+    console.log(button.dataset);
+
+
+
+  })
+
+})
 
 
