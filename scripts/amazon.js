@@ -80,8 +80,22 @@ jsCartbtn.forEach((button)=>{
    
     console.log(cart)
 
+    
+    let totalCartQuantity=0;
+    cart.forEach((items)=>{
+      totalCartQuantity+=items.quantity;
+    })
+    console.log(totalCartQuantity)
+    const cartQuantityValue=document.querySelector(".js-cart-quantity")
+    cartQuantityValue.innerHTML=totalCartQuantity;
+
   })
 
 })
+
+
+
+
+
 
 
