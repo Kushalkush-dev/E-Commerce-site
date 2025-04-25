@@ -60,7 +60,6 @@ producthtml+= `<div class="product-container">
 
 
 function updateCartTotalQuantity(){
-     
   let totalCartQuantity=0;
   cart.forEach((items)=>{
     totalCartQuantity+=items.quantity;
@@ -68,7 +67,7 @@ function updateCartTotalQuantity(){
   console.log(totalCartQuantity)
   const cartQuantityValue=document.querySelector(".js-cart-quantity")
   cartQuantityValue.innerHTML=totalCartQuantity;
-
+  
 }
 
 
@@ -81,7 +80,7 @@ jsCartbtn.forEach((button)=>{
   button.addEventListener("click",()=>{
     const productId=button.dataset.productId
 
-    addToCart(productId)
+    addToCart(productId);
 
     updateCartTotalQuantity();
 
@@ -97,6 +96,6 @@ jsCartbtn.forEach((button)=>{
 
 
 
-
+updateCartTotalQuantity();
 
 
