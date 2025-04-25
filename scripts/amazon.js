@@ -93,9 +93,7 @@ jsCartbtn.forEach((button)=>{
 
 })
 
-
-
-
+//calling this function so that totalquantity loads as soon as the dom loads
 updateCartTotalQuantity();
 
 
