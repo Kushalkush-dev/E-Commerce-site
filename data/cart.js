@@ -1,6 +1,6 @@
 
 export let cart=JSON.parse(localStorage.getItem('cart')) || []
-
+let deliveryCounter=1
 
 export function addToCart(productId){
   let matchingitem;
@@ -17,9 +17,9 @@ export function addToCart(productId){
     cart.push({
       ProductId:productId,
       quantity:1,
-      deliveryOptionId:'1'
+      deliveryOptionId:deliveryCounter.toString()
     })
-    
+    deliveryCounter=(deliveryCounter%3)+1;
   }
 
   saveToStorage();
