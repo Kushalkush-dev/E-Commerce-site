@@ -1,5 +1,7 @@
 import {cart,deletecartitem} from "../data/cart.js";
 import {products} from "../data/products.js";
+import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
+
 
 
 let carthtml='';
@@ -115,7 +117,7 @@ document.querySelectorAll(".js-delete-link").forEach((link)=>{
 })
 
  
-
-
-
+const todaydate=dayjs()
+const deliveryDate=todaydate.format('dddd , MMMM, DD')
+console.log(deliveryDate)
 
